@@ -24,11 +24,41 @@ Para deixar o godot com a conf de fabrica: `ToolBar > Editor > Editor Layout > D
   - Então a organização em godot é uma árvore Jogo > `scenes` > `scenes` > `nodes`.
 
 - Como a organização tem forma de árvore, toda `scene` deve começar por um `node` raiz.
-- Os tipos básicos de `node`:
-  1. `CharacterBody2D`
-  2. `RigidBody`
-  3. `Solid`
 
 ### Personagem principal
 - Para o personagem principal se começa por um `CharacterBody2D`.
-- Para adicionar um sprite 
+- Para adicionar um sprite `RightClick in CharacterBody2D > Add Child Node > Sprite 2D`
+  - Para carregar assets no godot: selecciona a pasta onde estão criados e arrasta na pasta `res://` do filesystem.
+  - Seleciona o nodo `Sprite 2D`, e arrasta a o sprite do filesystem ate o campo `Texture` no inspector.
+
+![alt text](image.png)
+
+- Agora para adicionar o collider `RightClick in CharacterBody2D > Add Child Node > CollisionShape2D`. Ao selecionar ele podemos escolher o shape :  
+![alt text](image-1.png)
+
+- No caso do exemplo será `capsule` e podemos customizar o tamanho:  
+
+![alt text](image-2.png)
+
+- Pronto! Isso daqui é uma `scene` composta de 3 `nodes`.
+- Para salvar `Toolbar > Scene > Save Scene >` seleciona um nome e `Save`.
+  - É recomendável criar uma pasta para salvar todas as escenas assim fica mais organizado. Ao criar por exemplo a pasta `personagem` e salvar dentro a `scene` `personagem.tscn`. Podemos ver essa organização no `filesystem`. 
+
+![alt text](image-3.png)
+
+### Fisicas
+
+- Os tipos básicos de `node`:
+  1. `CharacterBody2D`: São controlados diretamente (por el usuário). O movimento deles afetam outros objetos. Aplicação: personagens.
+  2. `RigidBody`: Para simular objetos, se movem quando se aplicam forças neles (gravidade, impulsos) e o motor calcula o movimento. O movimento deles afetam outros objetos. Aplicação: caixas, obstáculos
+  3. `StaticBody`: No se movem devido a forças externas, se ele se move nao afeta outros objetos. Aplicaçâo: Chao, parede, superficies em movimento
+
+### Chao
+- Criamos uma nova scena, o `node` raiz é um `StaticBody2D`
+- Ao arrastar uma imagem no `workspace` da `scene` se criara automaticament um `node` `sprite2D`
+
+![alt text](image-4.png)
+
+- Adicionamos um `CollisionShape2D`, selecionamos o shape `Rectangle` e ajustamos o tamanho ao chao (apenas a parte onde o personagem vai andar).
+
+![alt text](image-5.png)

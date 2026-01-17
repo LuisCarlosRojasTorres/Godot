@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://da05tbd8mbm7k"]
+
+[ext_resource type="Texture2D" uid="uid://xalh0jcceivx" path="res://assets/kenney/character/character_round_purple.png" id="1_pqdfn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eg6rg"]
+radius = 18.0
+height = 58.0
+
+[node name="Personagem" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pqdfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_eg6rg")
