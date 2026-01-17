@@ -62,3 +62,11 @@ Para deixar o godot com a conf de fabrica: `ToolBar > Editor > Editor Layout > D
 - Adicionamos um `CollisionShape2D`, selecionamos o shape `Rectangle` e ajustamos o tamanho ao chao (apenas a parte onde o personagem vai andar).
 
 ![alt text](image-5.png)
+
+### Plataforma
+- É possivel de criar uma `scene` a partir de outra.
+- `RightClick in Scene > Duplicate`
+- Substitui o texture, e ajuste o `collision`
+- Ao ser uma plataforma da pra subir desde baixo dela porem ao caminha por cima nao pode descer (tipo Mario). Selecionar o `CollisionShape2D` e click no `OneWay Collision`
+
+![alt text](image-6.png)

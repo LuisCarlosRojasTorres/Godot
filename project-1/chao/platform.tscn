@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7vjixdtwucsb"]
+
+[ext_resource type="Texture2D" uid="uid://dbcswae41y15" path="res://assets/kenney/floor/top.png" id="1_cas7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xo103"]
+size = Vector2(1449.5, 43)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Ladder" type="Sprite2D" parent="."]
+scale = Vector2(1.5557342, 1.8673469)
+texture = ExtResource("1_cas7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, -19.5)
+shape = SubResource("RectangleShape2D_xo103")
+one_way_collision = true
