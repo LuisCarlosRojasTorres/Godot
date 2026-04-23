@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://nbk1agvn1jvw"]
+
+[ext_resource type="Texture2D" uid="uid://ochcjg3t4prm" path="res://assets/kenney/enemies/barrel_yellow.png" id="1_1ehy0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_meikb"]
+radius = 19.026299
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="BarrelYellow" type="Sprite2D" parent="."]
+texture = ExtResource("1_1ehy0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_meikb")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1xcerkltkqwb"]
+
+[ext_resource type="PackedScene" uid="uid://ca70vkf2gbwcu" path="res://chao/ponte.tscn" id="1_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://b7vjixdtwucsb" path="res://chao/platform.tscn" id="2_rka8t"]
+[ext_resource type="PackedScene" uid="uid://wvkx5ityrk4w" path="res://chao/top.tscn" id="3_5hph3"]
+[ext_resource type="PackedScene" uid="uid://nbk1agvn1jvw" path="res://enemies/barril.tscn" id="4_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://da05tbd8mbm7k" path="res://personagem/personagem.tscn" id="5_rka8t"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(48, 853)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(705, -185)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(383, -335)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(648, -365)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(826, -499)
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(407, -522)
+
+[node name="RigidBody2D6" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(539, -651)
+
+[node name="RigidBody2D7" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(1040, -692)
+
+[node name="RigidBody2D8" parent="." instance=ExtResource("4_j7kpp")]
+position = Vector2(463, -801)
+
+[node name="Personagem" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(244, -45)
+
+[node name="Suelos" type="Node" parent="."]
+
+[node name="StaticBody2D" parent="Suelos" instance=ExtResource("1_ihfcg")]
+position = Vector2(767, 941)
+rotation = -0.017453292
+
+[node name="StaticBody2D2" parent="Suelos" instance=ExtResource("2_rka8t")]
+position = Vector2(613, 719)
+rotation = 0.08726645
+
+[node name="StaticBody2D3" parent="Suelos" instance=ExtResource("2_rka8t")]
+position = Vector2(831, 553)
+rotation = -0.08726645
+
+[node name="StaticBody2D4" parent="Suelos" instance=ExtResource("2_rka8t")]
+position = Vector2(597.00006, 391)
+rotation = 0.06981316
+
+[node name="StaticBody2D5" parent="Suelos" instance=ExtResource("2_rka8t")]
+position = Vector2(828, 246.00006)
+rotation = -0.052359883
+
+[node name="StaticBody2D6" parent="Suelos" instance=ExtResource("3_5hph3")]
+position = Vector2(392, 107)
+rotation = 0.034906585
