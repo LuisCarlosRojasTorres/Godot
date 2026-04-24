@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1xcerkltkqwb"]
+[gd_scene load_steps=7 format=3 uid="uid://c1xcerkltkqwb"]
 
 [ext_resource type="PackedScene" uid="uid://ca70vkf2gbwcu" path="res://chao/ponte.tscn" id="1_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://b7vjixdtwucsb" path="res://chao/platform.tscn" id="2_rka8t"]
 [ext_resource type="PackedScene" uid="uid://wvkx5ityrk4w" path="res://chao/top.tscn" id="3_5hph3"]
 [ext_resource type="PackedScene" uid="uid://nbk1agvn1jvw" path="res://enemies/barril.tscn" id="4_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://da05tbd8mbm7k" path="res://personagem/personagem.tscn" id="5_rka8t"]
+[ext_resource type="PackedScene" uid="uid://6pd26b1onvjv" path="res://Enemy.tscn" id="6_5hph3"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(48, 853)
@@ -36,6 +37,8 @@ position = Vector2(463, -801)
 [node name="Personagem" parent="." instance=ExtResource("5_rka8t")]
 position = Vector2(244, -45)
 
+[node name="Camera2D" type="Camera2D" parent="Personagem"]
+
 [node name="Suelos" type="Node" parent="."]
 
 [node name="StaticBody2D" parent="Suelos" instance=ExtResource("1_ihfcg")]
@@ -61,3 +64,6 @@ rotation = -0.052359883
 [node name="StaticBody2D6" parent="Suelos" instance=ExtResource("3_5hph3")]
 position = Vector2(392, 107)
 rotation = 0.034906585
+
+[node name="Node2D" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(207, -800)
