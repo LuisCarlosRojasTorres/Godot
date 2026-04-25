@@ -38,6 +38,12 @@ saltar={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Plataforma"
+2d_render/layer_2="Persona"
+2d_render/layer_3="Enemigos"
+
 [rendering]
 
 renderer/rendering_method="mobile"
