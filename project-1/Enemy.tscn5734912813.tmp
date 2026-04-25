@@ -90,7 +90,7 @@ tracks/3/path = NodePath("../..")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.4666667),
+"times": PackedFloat32Array(3.9333334),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -101,7 +101,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_6do27"]
 resource_name = "reposo"
 length = 0.5
-loop_mode = 2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -184,6 +184,5 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
-autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

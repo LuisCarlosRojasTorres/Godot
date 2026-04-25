@@ -24,3 +24,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = velocity.y + JUMP_VELOCITY 
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("Um corpo entrou: " + body.name)
+	pass # Replace with function body.
