@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cah6aaojfm085"]
+
+[ext_resource type="Texture2D" uid="uid://ymgihcw8jc76" path="res://assets/kenney/ui/back.png" id="1_3628m"]
+[ext_resource type="Texture2D" uid="uid://d20771hcptbkl" path="res://assets/kenney/ui/tile_heart_morado.png" id="2_4vg2q"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -165.0
+offset_bottom = 64.0
+grow_horizontal = 0
+texture = ExtResource("1_3628m")
+
+[node name="Label_Time" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 20.0
+offset_right = -46.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "TIME: 100"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 1456.0
+offset_top = 65.0
+offset_right = 1573.0
+offset_bottom = 102.0
+
+[node name="Heart1" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_4vg2q")
+
+[node name="Heart2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_4vg2q")
+
+[node name="Heart3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_4vg2q")

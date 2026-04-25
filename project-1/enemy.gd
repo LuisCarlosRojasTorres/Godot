@@ -1,5 +1,4 @@
-class_name Boss
-extends Node2D
+class_name Boss extends Node2D
 
 @onready var animation_player = $AnimationPlayer
 const ESCENA_BARRIL = preload("res://enemies/barril.tscn")

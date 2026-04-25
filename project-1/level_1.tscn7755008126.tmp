@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1xcerkltkqwb"]
+[gd_scene load_steps=11 format=3 uid="uid://c1xcerkltkqwb"]
 
 [ext_resource type="PackedScene" uid="uid://ca70vkf2gbwcu" path="res://chao/ponte.tscn" id="1_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://b7vjixdtwucsb" path="res://chao/platform.tscn" id="2_rka8t"]
@@ -10,9 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cah6aaojfm085" path="res://ui/Ui.tscn" id="8_5rr72"]
 [ext_resource type="Script" uid="uid://c7ojqwqm3sqsy" path="res://ui/ui.gd" id="9_1pe0h"]
 [ext_resource type="Script" uid="uid://dhk0gen65axap" path="res://game_controller.gd" id="9_gyffv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyffv"]
-size = Vector2(94, 77)
 
 [node name="Level1" type="Node2D"]
 position = Vector2(48, 853)
@@ -83,10 +80,6 @@ texture = ExtResource("7_j7kpp")
 
 [node name="Area2D" type="Area2D" parent="Flag"]
 collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Flag/Area2D"]
-position = Vector2(-9, -4.5)
-shape = SubResource("RectangleShape2D_gyffv")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("8_5rr72")]
 script = ExtResource("9_1pe0h")

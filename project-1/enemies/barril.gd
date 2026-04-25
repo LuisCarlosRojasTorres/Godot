@@ -1,5 +1,4 @@
-class_name Barril
-extends RigidBody2D
+class_name Barril extends RigidBody2D
 
 const BARREL_RED = preload("res://assets/kenney/enemies/barrel_red.png")
 @export var limit_to_be_destroyed = 1000

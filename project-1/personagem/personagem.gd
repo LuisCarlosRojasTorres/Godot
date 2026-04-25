@@ -1,6 +1,6 @@
-class_name personagem
-extends CharacterBody2D
+class_name personagem extends CharacterBody2D
 
+signal player_hit()
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -500.0
@@ -33,3 +33,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 func damage_received():
 		print("Daño recibido")
+		player_hit.emit()
